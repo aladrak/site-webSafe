@@ -1,0 +1,33 @@
+#content {
+    text-align: center;
+}
+
+.product-cont {
+    margin: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--clr21);
+    cursor: pointer;
+}
+
+.product-cont img {
+    max-width: 80%;
+    max-height: 80vh;
+    margin: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--clr11);
+}
+
+.product-cont p {
+    color: var(--clr22);
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.product-cont:hover {
+    box-shadow: 0 4px 8px var(--clr01);
+}
+
+.product-cont:hover p {
+    color: var(--clr02);
+}

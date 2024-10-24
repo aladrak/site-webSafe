@@ -1,20 +1,23 @@
-:root{
+:root {
     --clr01: #1a1a1a;
     --clr02: #f3f3f3;
     --clr11: #333333;
     --clr12: #e6e6e6;
     --clr21: #4d4d4d;
     --clr22: #d9d9d9;
-  }
-  * {
+}
+
+* {
     margin: 0;
     padding: 0;
-  }
-  body {
+}
+
+body {
     background-color: var(--clr11);
     color: var(--clr12);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-  #content {
+}
+
+#content {
     width: 100%;
-  }
+}
