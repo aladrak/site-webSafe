@@ -16,8 +16,50 @@ body {
     background-color: var(--clr11);
     color: var(--clr12);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--clr01);
+    color: var(--clr02);
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-bottom: 15px;
 }
 
 #content {
     width: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+/* Стили для абзацев */
+p {
+    margin: 0 0 15px;
+}
+
+/* Стили для ссылок */
+a {
+    color: #3498db;
+    text-decoration: none;
 }
