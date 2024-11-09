@@ -29,6 +29,15 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     display: flex;
+    z-index: 1
+}
+
+.justyfy-center {
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
 }
 
 /* Стили для заголовков */

@@ -4,7 +4,7 @@ const cardContainer = document.getElementById('card-container');
 // Массив с текстами для карточек
 const cardTexts = [
     '1',
-    '2',
+    '2\n1',
     '3',
     '4',
     '5',
