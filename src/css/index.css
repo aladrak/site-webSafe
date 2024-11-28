@@ -3,7 +3,6 @@
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     padding-top: 80px;
@@ -13,13 +12,46 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.1); /* subtle background color on hover */
 }
 
+#card-container {
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Зазор между элементами */
+}
+
 .card {
+    width: 100%;
+    max-width: 400px; /* Ограничиваем максимальную ширину карточки */
     background-color: var(--clr21);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Включает padding и border в ширину и высоту элемента */
+}
+
+.card h3 {
+    margin-top: 0;
+    /* color: #333; */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+
+.card p {
+    margin: 0;
+    /* color: #555; */
+    font-size: 1em;
 }
 
 /* Header button styles */
