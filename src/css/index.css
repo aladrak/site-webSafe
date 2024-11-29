@@ -55,14 +55,6 @@ button:hover {
     font-size: 1em;
 }
 
-/* Header button styles */
-header button {
-    background-color: transparent;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
 /*
 .product-cont {
     margin: 16px;

@@ -1,14 +1,13 @@
 (function() {
     const header = document.querySelector('header');
     if (header) {
-        // Создаем логотип
-        const logo = document.createElement('button');
-        logo.type = 'button';
-        logo.className = 'logo';
-        logo.innerHTML = '<img src="src/img/logo.png" style="width: 45px; height: 45px;">';
+        // Логотип
+        const logo = document.createElement('a');
+        logo.className = 'logo flex';
+        logo.innerHTML = '<img src="src/img/logo.svg"  alt="logo" width="45px" height="45px" viewBox="0 0 100 100"><p>WebSafe</p>';
         logo.onclick = () => window.location.href = 'index.html';
 
-        // Создаем кнопки навигации
+        // Кнопки навигации
         const navButtons = [
             { text: 'Тест для самопроверки', href: 'test.html' },
             { text: '???', href: 'index.html' },
@@ -17,6 +16,11 @@
 
         const navContainer = document.createElement('div');
         navContainer.className = 'nav-container';
+        navContainer.appendChild(logo);
+
+        const sep = document.createElement('div');
+        sep.className = 'line';
+        navContainer.appendChild(sep);
 
         navButtons.forEach(button => {
             const navButton = document.createElement('button');
@@ -27,8 +31,7 @@
             navContainer.appendChild(navButton);
         });
 
-        // Добавляем логотип и кнопки навигации в header
-        header.appendChild(logo);
+        // header.appendChild(logo);
         header.appendChild(navContainer);
     }
 })();
