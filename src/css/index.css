@@ -56,26 +56,29 @@ button:hover {
 }
 
 /* Стили для блока с историями */
-.stories-container {
+#story-container {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden; /* Скрываем скролл-бар */
     gap: 10px; /* Зазор между элементами */
     padding: 20px;
     background-color: var(--clr21);
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-top: 20px;
+    position: relative; /* Для абсолютного позиционирования кнопок */
     scroll-behavior: smooth;
+    white-space: nowrap; /* Предотвращает перенос элементов на новую строку */
 }
 
 .story {
     min-width: 300px; /* Минимальная ширина истории */
-    background-color: var(--clr22);
+    background-color: var(--clr12);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box; /* Включает padding и border в ширину и высоту элемента */
+    display: inline-block; /* Предотвращает перенос элементов на новую строку */
 }
 
 .story h3 {
@@ -94,7 +97,7 @@ button:hover {
 /* Стили для кнопок прокрутки */
 .scroll-button {
     position: absolute;
-    top: 50%;
+    top: 85%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.1);
     border: none;
