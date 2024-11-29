@@ -29,3 +29,51 @@ function createCard(title, text) {
 window.onload = function() {
     cardTexts.forEach(cardData => createCard(cardData.title, cardData.text)); // Создаём карточки из массива
 };
+
+// Создаем блок с историями
+const storiesContainer = document.getElementById('story-container');
+
+// Массив с историями
+const stories = [
+    { title: 'История 1', text: 'Это история 1.' },
+    { title: 'История 2', text: 'Это история 2.' },
+    { title: 'История 3', text: 'Это история 3.' },
+    { title: 'История 4', text: 'Это история 4.' }
+];
+
+// Функция для создания истории
+function createStory(title, text) {
+    const story = document.createElement('div');
+    story.className = 'story'; // Применяем класс для стилизации
+
+    const storyTitle = document.createElement('h3');
+    storyTitle.textContent = title;
+    story.appendChild(storyTitle);
+
+    const storyText = document.createElement('p');
+    storyText.textContent = text;
+    story.appendChild(storyText);
+
+    storiesContainer.appendChild(story); // Добавляем историю в контейнер
+}
+
+// Создаем истории при загрузке страницы
+stories.forEach(storyData => createStory(storyData.title, storyData.text));
+
+// Добавляем контейнер с историями в DOM
+document.body.appendChild(storiesContainer);
+
+// Создаем кнопки для прокрутки
+const scrollLeftButton = document.createElement('button');
+scrollLeftButton.className = 'scroll-button left';
+scrollLeftButton.innerHTML = '&lt;';
+scrollLeftButton.onclick = () => storiesContainer.scrollBy({ left: -300, behavior: 'smooth' });
+
+const scrollRightButton = document.createElement('button');
+scrollRightButton.className = 'scroll-button right';
+scrollRightButton.innerHTML = '&gt;';
+scrollRightButton.onclick = () => storiesContainer.scrollBy({ left: 300, behavior: 'smooth' });
+
+// Добавляем кнопки в DOM
+storiesContainer.appendChild(scrollLeftButton);
+storiesContainer.appendChild(scrollRightButton);

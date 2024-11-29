@@ -55,6 +55,65 @@ button:hover {
     font-size: 1em;
 }
 
+/* Стили для блока с историями */
+.stories-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; /* Зазор между элементами */
+    padding: 20px;
+    background-color: var(--clr21);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    scroll-behavior: smooth;
+}
+
+.story {
+    min-width: 300px; /* Минимальная ширина истории */
+    background-color: var(--clr22);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Включает padding и border в ширину и высоту элемента */
+}
+
+.story h3 {
+    margin-top: 0;
+    color: var(--clr21);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.story p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Стили для кнопок прокрутки */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 /*
 .product-cont {
     margin: 16px;
