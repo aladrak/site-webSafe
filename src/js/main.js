@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(function() {
     const header = document.querySelector('header');
     if (header) {
         // Создаем логотип
@@ -31,4 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
         header.appendChild(logo);
         header.appendChild(navContainer);
     }
-});
+})();
