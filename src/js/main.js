@@ -1,13 +1,11 @@
 (function() {
     const header = document.querySelector('header');
     if (header) {
-        // Логотип
         const logo = document.createElement('a');
         logo.className = 'logo flex';
         logo.innerHTML = '<img src="src/img/logo.svg"  alt="logo" width="45px" height="45px" viewBox="0 0 100 100"><p>WebSafe</p>';
         logo.onclick = () => window.location.href = 'index.html';
 
-        // Кнопки навигации
         const navButtons = [
             { text: 'Тест для самопроверки', href: 'test.html' },
             { text: '???', href: 'index.html' },
