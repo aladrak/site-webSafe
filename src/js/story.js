@@ -1,53 +1,41 @@
-const storiesContainer = document.getElementById('story-container');
+// const storyContainer = document.getElementById('story-container');
+// const storyTexts = [
+//     { title: 'S1', text: 'Lorem' },
+//     { title: 'S2', text: 'fe' },
+//     { title: 'S3', text: 'fe' },
+//     { title: 'S4', text: 'fe' },
+//     { title: 'S5', text: 'fe' }
+// ];
 
-const stories = [
-    { title: 'История 1', text: 'Это история 1.' },
-    { title: 'История 2', text: 'Это история 2.' },
-    { title: 'История 3', text: 'Это история 3.' },
-    { title: 'История 4', text: 'Это история 4.' },
-    { title: 'История 4', text: 'Это история 4.' },
-    { title: 'История 4', text: 'Это история 4.' }
-];
+let currentIndex = 1;
+showSlides(currentIndex);
 
-// Функция для создания истории
-function createStory(title, text) {
-    const story = document.createElement('div');
-    story.className = 'story'
-
-    const storyTitle = document.createElement('h3');
-    storyTitle.textContent = title;
-    story.appendChild(storyTitle);
-
-    const storyText = document.createElement('p');
-    storyText.textContent = text;
-    story.appendChild(storyText);
-
-    storiesContainer.appendChild(story);
+function showSlides(n) {
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+    
+    if (n > slides.length) {
+        currentIndex = 1;
+    }
+    if (n < 1) {
+        currentIndex = slides.length;
+    }
+    
+    slides.forEach(slide => slide.style.display = 'none');
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentIndex - 1].style.display = 'block';
+    dots[currentIndex - 1].classList.add('active');
 }
 
-// Истории при загрузке страницы
-stories.forEach(storyData => createStory(storyData.title, storyData.text));
+function currentSlide(n) {
+    showSlides(currentIndex = n);
+}
 
+document.querySelector('.slider-btn.prev').addEventListener('click', () => {
+    showSlides(currentIndex -= 1);
+});
 
-// Кнопки для прокрутки
-const scrollLeftButton = document.createElement('button');
-scrollLeftButton.className = 'scroll-button left';
-scrollLeftButton.innerHTML = '&lt;';
-scrollLeftButton.onclick = () => {
-    const firstStory = storiesContainer.firstElementChild;
-    storiesContainer.appendChild(firstStory);
-    storiesContainer.scrollBy({ left: -firstStory.offsetWidth, behavior: 'smooth' });
-};
-
-const scrollRightButton = document.createElement('button');
-scrollRightButton.className = 'scroll-button right';
-scrollRightButton.innerHTML = '&gt;';
-scrollRightButton.onclick = () => {
-    const lastStory = storiesContainer.lastElementChild;
-    storiesContainer.insertBefore(lastStory, storiesContainer.firstElementChild);
-    storiesContainer.scrollBy({ left: lastStory.offsetWidth, behavior: 'smooth' });
-};
-
-// Добавляем кнопки в DOM
-document.body.appendChild(scrollLeftButton);
-document.body.appendChild(scrollRightButton);
+document.querySelector('.slider-btn.next').addEventListener('click', () => {
+    showSlides(currentIndex += 1);
+});

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Web-Safe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Веб-сайт, информирующий об угрозе мошенничества.">
@@ -19,7 +19,41 @@
     <div class="container">
         <div></div>
         <div id="card-container" class="justyfy-center"></div>
-		<div id="story-container" class=""></div>
+        <div id="story-container">
+            <div class="slider-container">
+                <button class="slider-btn prev" type="button">&#10094;</button>
+                <div class="slider">
+                    <div class="slide">
+                        <h2>Story 1</h2>
+                        <p>This is the first story. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    </div>
+                    <div class="slide">
+                        <h2>Story 2</h2>
+                        <p>This is the second story. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    </div>
+                    <div class="slide">
+                        <h2>Story 3</h2>
+                        <p>This is the third story. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    </div>
+                    <div class="slide">
+                        <h2>Story 4</h2>
+                        <p>This is the fourth story. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    </div>
+                    <div class="slide">
+                        <h2>Story 5</h2>
+                        <p>This is the fifth story. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    </div>
+                </div>
+                <button class="slider-btn next" type="button">&#10095;</button>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
     </div>
     <footer></footer>
 </div>

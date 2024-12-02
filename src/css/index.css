@@ -12,6 +12,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.1); /* subtle background color on hover */
 }
 
+/* Карточки */
 #card-container {
     text-align: start;
     display: flex;
@@ -55,67 +56,78 @@ button:hover {
     font-size: 1em;
 }
 
-/* Стили для блока с историями */
+/* Слайдер с историями */
 #story-container {
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
+}
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
     display: flex;
-    overflow: hidden; /* Скрываем скролл-бар */
-    gap: 10px; /* Зазор между элементами */
-    padding: 20px;
-    background-color: var(--clr21);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 20px;
-    position: relative; /* Для абсолютного позиционирования кнопок */
-    scroll-behavior: smooth;
-    white-space: nowrap; /* Предотвращает перенос элементов на новую строку */
+    transition: transform 0.5s ease-in-out;
 }
 
-.story {
-    min-width: 300px; /* Минимальная ширина истории */
-    background-color: var(--clr12);
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Включает padding и border в ширину и высоту элемента */
-    display: inline-block; /* Предотвращает перенос элементов на новую строку */
 }
 
-.story h3 {
+.slide h2 {
     margin-top: 0;
-    color: var(--clr21);
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
 }
 
-.story p {
-    margin: 0;
-    font-size: 1em;
-}
-
-/* Стили для кнопок прокрутки */
-.scroll-button {
+.slider-btn {
     position: absolute;
-    top: 85%;
+    top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    padding: 10px;
+    font-size: 24px;
     cursor: pointer;
-    z-index: 1;
+    padding: 10px;
 }
 
-.scroll-button.left {
+.slider-btn.prev {
     left: 10px;
 }
 
-.scroll-button.right {
+.slider-btn.next {
     right: 10px;
 }
 
-.scroll-button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
 }
 /*
 .product-cont {
