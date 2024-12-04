@@ -13,6 +13,7 @@ showSlides(currentIndex);
 function showSlides(n) {
     let slides = document.querySelectorAll('.slide');
     let dots = document.querySelectorAll('.dot');
+    let slider = document.querySelector('.slider');
     
     if (n > slides.length) {
         currentIndex = 1;
@@ -21,11 +22,18 @@ function showSlides(n) {
         currentIndex = slides.length;
     }
     
-    slides.forEach(slide => slide.style.display = 'none');
+    let translateValue = -(currentIndex - 1) * 100 + '%';
+    slider.style.transform = 'translateX(' + translateValue + ')';
+
     dots.forEach(dot => dot.classList.remove('active'));
-    
-    slides[currentIndex - 1].style.display = 'block';
     dots[currentIndex - 1].classList.add('active');
+
+    // slides.forEach(slide => slide.style.display = 'none');
+    // dots.forEach(dot => dot.classList.remove('active'));
+    
+    // slides[currentIndex - 1].style.display = 'block';
+    // dots[currentIndex - 1].classList.add('active');
+    
 }
 
 function currentSlide(n) {

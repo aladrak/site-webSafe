@@ -7,9 +7,8 @@
         logo.onclick = () => window.location.href = 'index.html';
 
         const navButtons = [
-            { text: 'Тест для самопроверки', href: 'test.html' },
-            { text: '???', href: 'index.html' },
-            { text: '!!!', href: 'index.html' }
+            { text: 'Памятка', href: 'index.html' },
+            { text: 'Тест для самопроверки', href: 'test.html' }
         ];
 
         const navContainer = document.createElement('div');

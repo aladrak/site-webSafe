@@ -1,7 +1,5 @@
-// Получаем ссылку на контейнер для карточек
 const cardContainer = document.getElementById('card-container');
 
-// Массив с текстами для карточек
 const cardTexts = [
     { title: 'Как происходит фишинг?', text: '1. Злоумышленник создает фишинговый сайт, имитирующий популярный интернет-ресурс.<br>2. Пользователь попадает на этот сайт через ссылку, полученную в социальных сетях или электронной почте.<br>3. После этого он вводит свои личные данные, которые становятся доступными мошенникам.<br>4. В дальнейшем эти данные могут использоваться в незаконных целях.' },
     { title: 'Как защитить себя от фишинга?', text: '1. Не общайтесь с незнакомцами, особенно если они просят данные или ссылки.<br>2. Используйте антивирус для защиты системы.<br>3. Не открывайте вложения в электронных письмах.<br>4. Регулярно обновляйте программное обеспечение.<br>5. Никогда не отправляйте пароли по электронной почте и не сохраняйте их на рабочем столе.' },
@@ -9,23 +7,21 @@ const cardTexts = [
     { title: 'Что следует делать, если вы уже перешли по ссылке?', text: '1. Не впадайте в панику. Обновите свои учетные данные на всех веб-сайтах, где вы их использовали.<br>2. Смените пароли или немедленно свяжитесь с вашим банком, в зависимости от ситуации.' }
 ];
 
-// Функция для создания карточки
 function createCard(title, text) {
     const card = document.createElement('div');
-    card.className = 'card'; // Применяем класс для стилизации
+    card.className = 'card';
 
     const cardTitle = document.createElement('h3');
     cardTitle.textContent = title;
     card.appendChild(cardTitle);
 
     const cardText = document.createElement('p');
-    cardText.innerHTML = text; // Используем innerHTML для вставки HTML-кода
+    cardText.innerHTML = text; 
     card.appendChild(cardText);
 
-    cardContainer.appendChild(card); // Добавляем карточку в контейнер
+    cardContainer.appendChild(card);
 }
 
-// Создаём карточки при загрузке страницы
 window.onload = function() {
-    cardTexts.forEach(cardData => createCard(cardData.title, cardData.text)); // Создаём карточки из массива
+    cardTexts.forEach(cardData => createCard(cardData.title, cardData.text));
 };

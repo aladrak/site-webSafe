@@ -20,6 +20,16 @@ body {
     line-height: 1.6;
 }
 
+#content {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 80px;
+}
+
 header {
     background-color: var(--clr01);
     color: var(--clr02);
@@ -88,17 +98,25 @@ header .nav-button {
 }
 
 header .nav-button:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* subtle background color on hover */
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .justyfy-center {
     justify-content: center;
 }
 
+.items-center {
+    justify-items: center;
+}
+
+.unselect {
+    user-select: none;
+}
+
 .flex {
     display: flex;
 }
-/* Стили для заголовков */
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--clr02);
 }
@@ -119,12 +137,10 @@ h3 {
     font-size: 1.75em;
 }
 
-/* Стили для абзацев */
 p {
     margin: 0 0 15px;
 }
 
-/* Стили для ссылок */
 a {
     color: #3498db;
     text-decoration: none;
