@@ -56,6 +56,11 @@ button:hover {
     font-size: 1em;
 }
 
+.card img {
+    width: 150px;
+    height: 150px;
+}
+
 /* Слайдер с историями */
 #story-container {
     display: inline-grid;
