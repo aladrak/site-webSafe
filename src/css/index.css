@@ -1,3 +1,30 @@
+
+/* Адаптация слайдера */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 95%; /* Уменьшаем ширину слайдера */
+        padding: 10px;
+    }
+
+    .slide {
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    .slide img {
+        width: 100px; /* Уменьшаем изображения */
+        height: 100px;
+    }
+
+    .dots {
+        margin-top: 5px; /* Уменьшаем отступ точек */
+    }
+
+    .dot {
+        width: 8px; /* Уменьшаем размер точек */
+        height: 8px;
+    }
+}
+
 button:hover {
     background-color: rgba(0, 0, 0, 0.1); /* subtle background color on hover */
 }
@@ -12,25 +39,37 @@ button:hover {
     background-color: #ddd;
 }
 
-/* Карточки */
 #card-container {
     text-align: start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px; /* Зазор между элементами */
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        flex-direction: column; /* Карточки в столбик */
+        gap: 15px; /* Увеличиваем зазор */
+    }
 }
 
+/* Улучшенные стили для карточек */
 .card {
     width: 100%;
-    max-width: 400px; /* Ограничиваем максимальную ширину карточки */
+    max-width: 400px; /* Ограничиваем максимальную ширину */
     background-color: var(--clr21);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Включает padding и border в ширину и высоту элемента */
+    box-sizing: border-box;
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        max-width: 100%; /* Занимает всю ширину экрана */
+        padding: 15px; /* Уменьшаем отступы */
+    }
 }
 
 .card h3 {
@@ -39,26 +78,32 @@ button:hover {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
-}
 
-.card h3::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #ddd;
-    margin-top: 10px;
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        font-size: 1.3em; /* Уменьшаем размер заголовка */
+    }
 }
 
 .card p {
     margin: 0;
-    /* color: #555; */
     font-size: 1em;
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        font-size: 0.9em; /* Уменьшаем размер текста */
+    }
 }
 
 .card img {
     width: 150px;
     height: 150px;
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        width: 100%; /* Изображение занимает всю ширину */
+        height: auto; /* Сохраняем пропорции */
+    }
 }
 
 /* Слайдер с историями */

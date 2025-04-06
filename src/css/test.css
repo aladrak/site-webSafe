@@ -1,3 +1,25 @@
+/* Адаптация теста */
+@media (max-width: 768px) {
+    #quiz-container {
+        width: 95%; /* Занимает почти всю ширину экрана */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    #question {
+        font-size: 16px; /* Уменьшаем размер текста вопроса */
+    }
+
+    #answers button {
+        font-size: 14px; /* Уменьшаем размер текста кнопок */
+        padding: 8px; /* Уменьшаем отступы кнопок */
+    }
+
+    #next-button {
+        padding: 8px 16px; /* Уменьшаем отступы кнопки "Далее" */
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+}
+
 #quiz-container {
     background: var(--clr21);
     padding: 20px;

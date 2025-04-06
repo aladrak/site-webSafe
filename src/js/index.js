@@ -12,7 +12,7 @@ function createCard(img, title, text) {
     card.className = 'card items-center';
 
     const cardImg = document.createElement('img');
-    cardImg.src = img; 
+    cardImg.src = img;
     card.appendChild(cardImg);
 
     const cardTitle = document.createElement('h3');
