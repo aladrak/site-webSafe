@@ -83,6 +83,9 @@ background-color: #0056b3;
     font-size: 14px;
     color: white;
 }
+#feedback strong {
+    color: #49ff29;
+}
 
 /* Адаптация теста */
 @media (max-width: 768px) {
