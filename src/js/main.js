@@ -14,7 +14,6 @@
         logo.innerHTML = '<img src="src/img/logo.svg" alt="logo" width="45px" height="45px"><p>WebSafe</p>';
         logo.onclick = () => window.location.href = 'index.html';
 
-
         // Добавляем разделительную линию
         const sep = document.createElement('div');
         sep.className = 'line';
@@ -22,7 +21,8 @@
         // Добавляем кнопки навигации
         const navButtons = [
             { text: 'Памятка', href: 'index.html' },
-            { text: 'Тест для самопроверки', href: 'test.html' }
+            { text: 'Тест для самопроверки', href: 'test.html' },
+            { text: 'Памятка для пенсионеров', href: 'page.html' }
         ];
         const btnContainer = document.createElement('div');
         btnContainer.className = 'btn-container';

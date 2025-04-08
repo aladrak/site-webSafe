@@ -47,3 +47,8 @@ document.querySelector('.slider-btn.prev').addEventListener('click', () => {
 document.querySelector('.slider-btn.next').addEventListener('click', () => {
     showSlides(currentIndex += 1);
 });
+
+let autoSlideInterval = setInterval(() => {
+    currentIndex++;
+    showSlides(currentIndex);
+  }, 5000); // Перелистывание каждые 5 секунд

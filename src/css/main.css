@@ -131,6 +131,10 @@ header .nav-button:hover {
     user-select: none;
 }
 
+.grid {
+    display: grid;
+}
+
 .flex {
     display: flex;
 }
