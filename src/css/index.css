@@ -70,13 +70,10 @@ button:hover {
 }
 
 .card img {
-    width: 150px;
-    height: 150px;
-
+    width: 100px;
     /* Адаптивность для мобильных устройств */
     @media (max-width: 768px) {
-        width: 100%; /* Изображение занимает всю ширину */
-        height: auto; /* Сохраняем пропорции */
+        height: 100px; /* Сохраняем пропорции */
     }
 }
 

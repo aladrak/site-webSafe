@@ -11,9 +11,13 @@ function createCard(img, title, text) {
     const card = document.createElement('div');
     card.className = 'card items-center';
 
+    const imgCont = document.createElement('div');
+    
     const cardImg = document.createElement('img');
     cardImg.src = img;
-    card.appendChild(cardImg);
+    cardImg.draggable = false;
+    imgCont.appendChild(cardImg);
+    card.appendChild(imgCont);
 
     const cardTitle = document.createElement('h3');
     cardTitle.textContent = title;
