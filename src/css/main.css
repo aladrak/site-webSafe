@@ -33,6 +33,11 @@ body {
     line-height: 1.6;
 }
 
+body.dark-mode {
+    background-color: var(--clr12);
+    color: var(--clr01);
+}
+
 #content {
     text-align: center;
 }
@@ -181,7 +186,7 @@ a {
         align-items: center;
         background-color: var(--clr01);
         position: absolute;
-        top: 15px;
+        top: 5px;
         left: 0;
         width: 100%;
         z-index: 2;

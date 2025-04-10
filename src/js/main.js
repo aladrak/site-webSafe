@@ -36,11 +36,51 @@
             btnContainer.appendChild(navButton);
         });
 
+        const themeBtn = document.createElement('button');
+        themeBtn.id = 'theme-toggle';
+        themeBtn.
+
         burgerMenu.onclick = () => btnContainer.classList.toggle('active');
         navContainer.appendChild(burgerMenu);
         navContainer.appendChild(logo);
         navContainer.appendChild(sep);
         navContainer.appendChild(btnContainer);
+        navContainer.appendChild(themeBtn);
         header.appendChild(navContainer);
     }
 })();
+
+// Добавляем обработчик события на кнопку
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    }
+    loadTheme(); // Применяем сохраненную тему
+});
+
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    body.classList.toggle('dark-mode');
+
+    // Меняем иконку
+    if (body.classList.contains('dark-mode')) {
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Загружаем сохраненную тему
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-icon').textContent = '🌙';
+    } else {
+        document.getElementById('theme-icon').textContent = '☀️';
+    }
+}
